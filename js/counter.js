@@ -41,7 +41,9 @@ function makeCounter(profession, salary) {
 			digit.addClass("last")
 		}
 	}
-	var counterAndSymbol = $("<div>").addClass("counterAndSymbol").append($("<div>").addClass("dollar").text("$")).append(counter);
+	var counterAndSymbol = $("<div>").addClass("counterAndSymbol");
+	counterAndSymbol.append($("<div>").addClass("dollar").text("$")).append(counter);
+	counterAndSymbol.append($("<div>").addClass("narrow profession").text(profession));
 	counters.append(counterAndSymbol);
 	window.setInterval(function(){
 		updateSalaryInCounter(counter, salary);
