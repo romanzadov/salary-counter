@@ -49,3 +49,26 @@
 .counter .number.dash {
 	color: #bbb;
 }
+input {
+	border: 1px solid #333;
+	font-size: 16px;
+	padding: 6px 10px;
+}
+.counterAndSymbol {
+	clear:both;
+}
+#counters input {
+	float: right;
+	margin-right: 34px;
+	text-align: right;
+}
+#professions input {
+	font-style: italic;
+}
+#add-link {
+	text-decoration: none;
+	border: 1px solid #333;
+	padding: 6px;
+	font-size: 16px;
+	
+}
