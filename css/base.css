@@ -6,17 +6,15 @@
 #title {
 	font-size: 37px;
 	margin-bottom: 30px;
-	margin-left: 82px;
 }
 #counters, #professions {
 	float: left;
 	width: 400px;
 }
 #counters {
-	text-align: right;
 	margin-right: 30px;
 	border-right: 1px dashed black;
-	padding-right: 30px;
+	padding-right: 10px;
 }
 .dollar {
 	font-size: 60px;
@@ -26,22 +24,28 @@
 	vertical-align: 10px;
 }
 .dollar, .counter {
-	display: inline;
+	display: inline-block;
 }
 .profession {
 	font-style: italic;
 	padding-top: 26px;
 	padding-bottom: 24px;
 }
-.counter .number{
-	display: inline;
-	width: 16px;
-	min-width: 16px;
+.counter .number, .counter .decimal{
+	display: inline-block;
+	width: 24px;
+	height: 36px;
 	border: 3px solid #bbb;
 	border-right: none;
 	font-size: 32px;
-	padding: 3px;
+	text-align: center;
 }
-.counter .number:last-child {
+.counter .decimal {
+	border: none;
+}
+.counter .number.last {
 	border-right: 3px solid #bbb;
+}
+.counter .number.dash {
+	color: #bbb;
 }
