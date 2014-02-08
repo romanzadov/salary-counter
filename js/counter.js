@@ -6,7 +6,7 @@ $(function(){
 	makeCounter("CEO", 950000);
 	makeCounter("Hedge Fund Manager", 700000000); 
 	
-	var amount = $("#counters").find("input");
+	var amount = $("#amount-input");
 	amount.on("keyup", function(){
 		var valid = /^\d{0,11}(\.\d{0,2})?$/.test(this.value),
 			val = this.value;
@@ -16,7 +16,7 @@ $(function(){
 	});
 	$("#add-link").on("click", function(){
 		var salary = amount.val();
-		var name = $("#professions").find("input").val();
+		var name = $("#name-input").val();
 		if (name != "") {
 			makeCounter(name, salary);
 		}
@@ -24,10 +24,8 @@ $(function(){
 });
 
 function makeCounter(profession, salary) {
-	var professions = $("#professions");
-	professions.append($("<div>").addClass("profession").text(profession));
-	
-	var counters = $("#counters");
+	var container = $("<li>");
+
 	var counter = $("<div>").addClass("counter").addClass(profession);
 	for (var i = 0; i<11; i++) {
 		var digit = $("<div>").addClass("number");
@@ -43,8 +41,10 @@ function makeCounter(profession, salary) {
 	}
 	var counterAndSymbol = $("<div>").addClass("counterAndSymbol");
 	counterAndSymbol.append($("<div>").addClass("dollar").text("$")).append(counter);
-	counterAndSymbol.append($("<div>").addClass("narrow profession").text(profession));
-	counters.append(counterAndSymbol);
+	
+	container.append(counterAndSymbol);
+	container.append($("<div>").addClass("profession").text(profession));
+	$("#content").append(container);
 	window.setInterval(function(){
 		updateSalaryInCounter(counter, salary);
 	}, 100);
