@@ -22,14 +22,15 @@
 }
 .counter {
 	vertical-align: 10px;
+	height: 42px;
 }
 .dollar, .counter {
 	display: inline-block;
 }
 .profession {
 	font-style: italic;
-	padding-top: 27px;
-	padding-bottom: 24px;
+	padding-top: 33px;
+	height: 37px;
 }
 .counter .number, .counter .decimal{
 	display: inline-block;
