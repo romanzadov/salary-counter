@@ -39,6 +39,8 @@
 }
 .counter .decimal {
 	border: none;
+	width: 10px;
+	max-width: 10px;
 }
 .counter .number.last {
 	border-right: 3px solid #bbb;
@@ -50,7 +52,7 @@ input {
 	border: 1px solid #333;
 	font-size: 16px;
 	padding: 6px 10px;
-	width: 158px;
+	width: 165px;
 	margin-bottom: 20px;
 	text-align: right;
 }

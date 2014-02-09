@@ -1,7 +1,7 @@
 $(function(){
 	makeCounter("Median US household", 45000);
 	makeCounter("Teacher", 55000);
-	makeCounter("Nurse Practicioner", 95000);
+	makeCounter("Nurse Practitioner", 95000);
 	makeCounter("Lawyer", 130000);
 	makeCounter("CEO", 950000);
 	makeCounter("Hedge Fund Manager", 700000000); 
@@ -34,6 +34,9 @@ function makeCounter(profession, salary) {
 		if (i == 8) {
 			digit.addClass("last")
 			counter.append($("<div>").addClass("decimal").text("."));
+		}else if (i%3==2) {
+			digit.addClass("last")
+			counter.append($("<div>").addClass("decimal").text(","));
 		}
 		if (i == 10) {
 			digit.addClass("last")
